@@ -1,0 +1,8 @@
+# Resolution-Sorter has no third-party Python runtime dependencies.
+# It only needs the external `ffprobe` executable from FFmpeg:
+#   Debian/Ubuntu: sudo apt install ffmpeg
+#   macOS:         brew install ffmpeg
+#   Windows:       https://ffmpeg.org/download.html
+#
+# For running the test suite:
+pytest>=7.0

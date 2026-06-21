@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resolution-sorter"
+version = "1.0.0"
+description = "Sort videos by resolution into widescreen, square and vertical categories."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["video", "ffprobe", "ffmpeg", "resolution", "organizer", "cli"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Utilities",
+]
+
+# No third-party Python dependencies. The only runtime requirement is the
+# external `ffprobe` executable (shipped with FFmpeg).
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+resolution-sorter = "resolution_sorter.cli:main"
+
+[tool.setuptools]
+packages = ["resolution_sorter"]
