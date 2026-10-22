@@ -7,8 +7,7 @@ PROTON_DIR="${STEAM_ROOT}/steamapps/common/Proton 11.0"
 COMPAT="${STEAM_ROOT}/steamapps/compatdata/3549432507"
 WINEPREFIX="${COMPAT}/pfx"
 FIRST_EXE="/home/aqalaqyl/BDO/540q4bn.exe"
-GAME_EXE="/home/aqalaqyl/BDO/bin64/BlackDesert64.exe"
-FIRST_EXE_DELAY="${FIRST_EXE_DELAY:-15}"
+GAME_EXE="${WINEPREFIX}/drive_c/Pearlabyss/BlackDesert/BlackDesertLauncher.exe"
 
 WINE="${PROTON_DIR}/files/bin/wine"
 WINESERVER="${PROTON_DIR}/files/bin/wineserver"
@@ -107,8 +106,4 @@ fi
 echo "prefix: $WINEPREFIX"
 echo "server: $WINESERVER"
 launch "$FIRST_EXE" 1
-
-echo "wait:   ${FIRST_EXE_DELAY}s"
-sleep "$FIRST_EXE_DELAY"
-
 launch "$GAME_EXE" 0
